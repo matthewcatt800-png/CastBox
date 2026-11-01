@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CastBox" android:textAppearance="?attr/textAppearanceHeadlineLarge" android:textStyle="bold"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your phone as a Spotify-style wifi speaker" android:textAppearance="?attr/textAppearanceBodyMedium" android:alpha="0.7"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnReceive" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Be the speaker"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnDiscover" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Find devices to cast to"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnBt" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Cast over Bluetooth"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Devices" android:textAppearance="?attr/textAppearanceTitleMedium" android:layout_marginTop="20dp"/>
+    <LinearLayout android:id="@+id/deviceList" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/nowTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nothing playing" android:textAppearance="?attr/textAppearanceTitleMedium"/>
+        <SeekBar android:id="@+id/seek" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+        <TextView android:id="@+id/timeText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:00 / 0:00" android:textAppearance="?attr/textAppearanceBodySmall" android:alpha="0.7"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+          <com.google.android.material.button.MaterialButton android:id="@+id/btnPlay" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginEnd="6dp" android:text="Play"/>
+          <com.google.android.material.button.MaterialButton android:id="@+id/btnStop" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="Stop"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Volume" android:textAppearance="?attr/textAppearanceBodySmall" android:alpha="0.7" android:layout_marginTop="12dp"/>
+        <SeekBar android:id="@+id/vol" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100"/>
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView android:id="@+id/log" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceBodySmall" android:alpha="0.7" android:layout_marginTop="16dp"/>
+  </LinearLayout>
+</ScrollView>
